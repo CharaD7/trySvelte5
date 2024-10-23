@@ -1,18 +1,18 @@
 <script lang="ts">
-  let elapsed = $state(0);
-  let interval = $state(1000);
+let count = $state(0);
 
-  $effect(() => {
-    const id = setInterval(() => {
-      elapsed += 1;
-    }, interval);
-
-    return () => clearInterval(id);
-  })
+function increment() {
+  count += 1;
+}
 
 </script>
 
-<button onclick={()=> interval /= 2}>Speed Up</button>
-<button onclick={()=> interval *= 2}>Slow Down</button>
+<button onclick={increment}>
+  Clicked { count }
+  { count === 1 ? 'time' : 'times' }
+</button>
 
-<p>elapsed: { elapsed }</p>
+{#if  count > 10}
+  <p>{ count } is greater than 10.</p>
+  
+{/if}
