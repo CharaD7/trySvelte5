@@ -4,7 +4,7 @@
 
   function addNumber() {
     numbers.push(numbers.length + 1);
-    console.log(numbers);
+    console.log($state.snapshot(numbers));
   }
 </script>
 
