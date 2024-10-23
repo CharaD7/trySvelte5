@@ -33,6 +33,9 @@ To create a production version of your app:
 npm run build
 ```
 
+Tutorial guides can be found in the [Svelte docs](https://svelte.dev/tutorial).
+- Next, I am going to the [each-blocks](https://svelte.dev/tutorial/each-blocks) tutorial
+
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
