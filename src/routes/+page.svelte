@@ -1,21 +1,17 @@
 <script lang="ts">
-let count = $state(0);
-
-function increment() {
-  count += 1;
-}
-
+  const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'brown', 'black', 'white'];
+  let selected = $state(colors[0]);
 </script>
 
-<button onclick={increment}>
-  Clicked { count }
-  { count === 1 ? 'time' : 'times' }
-</button>
+<h1 style="color: {selected}">Pick a colour</h1>
 
-{#if  count > 10}
-  <p>{ count } is greater than 10.</p>
-{:else if count < 5}
-  <p>{ count } is less than 5</p>
-{:else} 
-  <p>{ count } is between 5 and 10</p>
-{/if}
+<div>
+  {#each colors as color}
+    <button
+      style="background: {color}"
+      aria-label={color}
+      aria-current={selected === color}
+      onclick={() => selected = color}
+    ></button>
+  {/each}
+</div>
