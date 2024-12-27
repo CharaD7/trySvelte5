@@ -14,6 +14,6 @@
   Reomve first thing
 </button>
 
-{#each things as thing}
+{#each things as thing (thing.id)}
   <Thing name={thing.name} />
 {/each}
