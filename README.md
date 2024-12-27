@@ -35,7 +35,7 @@ npm run build
 
 Tutorial guides can be found in the [Svelte docs](https://svelte.dev/tutorial).
 
-- Next, I am going to the [each-blocks](https://svelte.dev/tutorial/keyed-each-blocks) tutorial
+- Next, I am going to the [keyed-each-blocks](https://svelte.dev/tutorial/svelte/keyed-each-blocks) tutorial
 
 You can preview the production build with `npm run preview`.
 
