@@ -1,3 +1,12 @@
-<div onkeydowncapture={(e) => alert(`<div> ${e.key}`)} role="presentation">
-  <input onkeydowncapture={(e) => alert(`<input> ${e.key}`)} />
-</div>
+<script>
+  import Stepper from './Stepper.svelte';
+
+  let value = $state(0);
+</script>
+
+<p>The current value is {value}</p>
+
+<Stepper
+  increment={() => value += 1}
+  decrement={() => value -= 1}
+/>
